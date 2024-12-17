@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attractive Slider</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Wheels Gallery</h2>
+    <p>Explore our premium collection of alloy wheels for your vehicle.</p>
+    <div class="slider">
+      <button class="arrow left" onclick="moveSlide(-1)">&#8592;</button>
+      <div class="slides">
+        <div class="slide">
+          <img src="js1.jpg" alt="Wheel 1">
+          <div class="description">
+            <h3>Wheel 1</h3>
+            <p>17-inch Alloy Wheel</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="js2.jpg" alt="Wheel 2">
+          <div class="description">
+            <h3>Wheel 2</h3>
+            <p>18-inch Diamond Cut</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="js3.jpg" alt="Wheel 3">
+          <div class="description">
+            <h3>Wheel 3</h3>
+            <p>19-inch Foreshadow Finish</p>
+          </div>
+        </div>
+      </div>
+      <button class="arrow right" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+    <div class="footer">
+      &copy; 2024 Wheel Showcase. All Rights Reserved.
+    </div>
+  </div>
+  <script>
+    let currentSlide = 0;
+
+    function moveSlide(step) {
+      const slides = document.querySelector('.slides');
+      const totalSlides = document.querySelectorAll('.slide').length;
+
+      currentSlide = currentSlide + step;
+
+      if (currentSlide < 0) {
+        currentSlide = 0;
+      } else if (currentSlide >= totalSlides) {
+        currentSlide = totalSlides - 1;
+      }
+
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  </script>
+</body>
+</html>

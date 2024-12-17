@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFDEE9, #B5FFFC); 
+  overflow-y: auto; 
+  padding: 20px;
+}
+
+.container {
+  max-width: 1152px;
+  width: 100%;
+  background: linear-gradient(135deg, #fff, #f9f9f9); 
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 16px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #f1f1f1;
+  border-radius: 12px;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff7675;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: #d63031;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%; 
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.slide img {
+  width: 280px;
+  height: auto;
+  border: 4px solid #ff7675; 
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide img:hover {
+  transform: scale(1.2); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+  margin-top: 15px;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.description h3 {
+  font-size: 1.2rem;
+  color: #ff7675;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+}
